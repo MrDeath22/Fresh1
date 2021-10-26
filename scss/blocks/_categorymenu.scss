@@ -1,0 +1,52 @@
+.catergory-menu {
+    @include list-unstyled;
+
+    &__item:not(:last-child){
+        margin-bottom: 12px;
+    }
+
+    &__item:last-child{
+        margin-top: 36px;
+    }
+
+    &__title {
+        margin: 0 0 16px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: $cl-green;
+    }
+
+    &__link {
+        font-family: $font-open-sans;
+        font-size: 14px;
+        line-height: 19px;
+        color: $cl-txt;
+    }
+
+    &__btn{
+        background: #f5f5f5;
+        border-radius: 12px;
+        text-decoration: none;
+        position: relative;
+        padding: 12px 38px 12px 16px;
+
+        &::after{
+            content: "";
+            width: 16px;
+            height: 16px;
+            position:absolute;
+            right: 8%;
+            top: 50%;
+            transform: translate(5px,-30%);
+            background-image: url("../../img/btn-arow.svg");
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    .catergory-menu{
+        margin-bottom: 50px !important;
+    }
+}   
