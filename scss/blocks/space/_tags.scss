@@ -1,0 +1,117 @@
+.tags {
+   padding: 100px 0;
+}
+
+.tag {
+   text-align: start;
+   margin-right: 38px;
+
+   &__title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 1em;
+   }
+
+   &__btns {
+      max-width: 190px;
+      margin-bottom: 48px;
+   }
+
+   &__btn {
+      padding: 7px 10px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      border-radius: 15px;
+      color: $cl-green;
+      background-color: #F4F8EC;
+   }
+
+   &__back {
+      font-weight: bold;
+      font-size: 15px;
+      color: $cl-txt;
+
+      &::before {
+         position: relative;
+         top: 4px;
+         width: 16px;
+         height: 16px;
+         content: "";
+         margin-right: 8px;
+         background-image: url('../../../img/tags-i.svg');
+      }
+   }
+}
+
+.desc {
+   text-align: start;
+   font-family: $font-open-sans;
+
+   &__info {
+      max-width: 570px;
+      font-size: 17px;
+      line-height: 23px;
+      margin-bottom: 52px;
+   }
+
+   &__title {
+      font-family: $font-poppins;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 14px;
+   }
+
+   &__socical {
+      &-txt {
+         font-weight: 600;
+         font-size: 18px;
+         margin-right: 16px;
+      }
+
+      &-btn {
+         font-weight: bold;
+         font-size: 15px;
+         line-height: 22px;
+         padding: 7px 12px;
+         margin-right: 16px;
+         border-radius: 12px;
+         color: $cl-txt;
+         background-color: #F5F5F5;
+
+         .bx {
+            position: relative;
+            top: 3px;
+            font-size: 20px;
+            margin-right: 6px;
+         }
+      }
+   }
+}
+
+@include breakpoint-down (842px) {
+   .tag {
+      width: 100%;
+      padding-left: 3em;
+   }
+   .tag__back {
+      margin-bottom: 3em;
+   }
+}
+
+@include breakpoint-down (716px) {
+   .tag {
+      padding-left: 0;
+   }
+}
+
+@include breakpoint-down (610px) {
+   .desc__socical {
+      flex-flow: column;
+   }
+   .desc__socical-txt {
+      margin-bottom: 8px;
+   }
+   .desc__socical-btn {
+      margin: 8px 0;
+   }
+}
